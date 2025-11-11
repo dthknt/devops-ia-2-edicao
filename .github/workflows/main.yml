@@ -55,6 +55,6 @@ jobs:
               uses: azure/k8s-deploy@v5
               with:
                 namespace: default
-                manifest: 02-encontros-tech/k8s/manifests.yaml
+                manifests: 02-encontros-tech/k8s/manifests.yaml
                 images: eduardobarbosa81/bootcamp-encontros:v${{ github.run_number }}
             

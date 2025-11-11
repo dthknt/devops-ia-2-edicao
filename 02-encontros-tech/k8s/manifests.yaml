@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: encontros-tech
-        image: fabricioveronez/bootcamp-encontros-tech:v1
+        image: eduardobarbosa81/bootcamp-encontros:v1
         ports:
         - containerPort: 8000
         env:

@@ -53,7 +53,7 @@ jobs:
                 kubeconfig: ${{ secrets.KUBECONFIG }}
 
             - name: Create namespace if not exists (retorno é passado para comando após '|')
-              run: kubectl create namespace tech-homolog --dry-run-client -o yaml | kubectl apply -f -
+              run: kubectl create namespace tech-homolog --dry-run=client -o yaml | kubectl apply -f -
               
             - name: Create secrets in homolog (criar secret 'DATABASE_URL' no environment secrets)
               run: |

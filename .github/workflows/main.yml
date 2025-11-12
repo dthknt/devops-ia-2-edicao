@@ -59,7 +59,7 @@ jobs:
               run: |
                 kubectl create secret generic encontros-tech-secrets \
                 --from-literal=database-url="${{ secrets.DATABASE_URL }}" \
-                --namespace-tech-homolog \
+                --namespace=tech-homolog \
                 --dry-run=client -o yaml | kubectl apply -f
             
             - name: Deploy em Kubernetes
@@ -90,7 +90,7 @@ jobs:
               run: |
                 kubectl create secret generic encontros-tech-secrets \
                 --from-literal=database-url="${{ secrets.DATABASE_URL }}" \
-                --namespace-tech-producao \
+                --namespace=tech-producao \
                 --dry-run=client -o yaml | kubectl apply -f
             
             - name: Deploy em Kubernetes
